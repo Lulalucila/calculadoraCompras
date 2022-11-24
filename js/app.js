@@ -1,19 +1,52 @@
 
 const inflacion = 6
 let hayCuotas
-let monto;
+let interesEfectivo
+let monto
+let nombre = document.getElementById('nombreProducto');
 
-alert("Bienvenido a la calculadora que te ayuda a ganarle a la inflación ya sea en nuestros locales o en uno nuevo")
+let interes = document.getElementById('interes');
+let cuotas = document.getElementById('cuotas');
+let formulario = document.getElementById('formulario');
+let productos = []
 
-do{
-    monto = Number(prompt("Ingresar monto de lo que quieras comprar"));
-} while (monto < 0 || isNaN(monto))
+let eft = document.getElementById('flexRadioDefault1').value
 
-console.log("El monto de tu compra te recuerdo que es $" + monto);
-
-let nuestrosLocales = confirm("¿Tu comrpa es en alguno de nuestros locales? Gorrion / Prune / XL / Benedetta")
+let cuantoDescuento = document.createElement('div')
 
 
+function calcularTransferencia (){
+    return efectivoFinal = monto * ((100 - interesEfectivo) / 100 )
+}
+function calcularCuotaTotal(){
+    return cuotaTotal = monto * (1 + (interes/100))
+}
+function calcularCuota(){
+    return cuotaPura = cuotaTotal / cuotas
+}
+function agregarProducto(evt){
+    evt.preventDefault();
+    let monto = Number(document.getElementById('precioproducto').value);
+    let interesEfectivo = Number(document.getElementById('transferenciadescuento').value);
+    let efectivoFinal;
+    calcularTransferencia();
+//console.log(interesEfectivo)
+
+    //formulario.reset();
+    console.log(efectivoFinal)
+    
+    console.log(monto)  
+    console.log(typeof(efectivoFinal))
+    console.log(interesEfectivo)
+}
+
+
+formulario.addEventListener('submit', agregarProducto)
+
+/* let nuestrosLocales = confirm("¿Tu comrpa es en alguno de nuestros locales? Gorrion / Prune / XL / Benedetta")
+
+*/
+/*
 if(nuestrosLocales){
 let nuestroLocal = prompt("¿En que local te gustaría comprar? (recordá escribirlos tal cual  Gorrion - Prune -  XL - Benedetta ) ")
 
@@ -113,5 +146,15 @@ filtrarLocal()
 
 
 
+}
+*/
+
+
+let toggle = document.getElementById('switch');
+let body = document.querySelector('body');
+
+toggle.onclick = function () {
+    toggle.classList.toggle ('active');
+    body.classList.toggle ('active');
 }
 

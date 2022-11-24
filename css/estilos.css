@@ -1,0 +1,73 @@
+body{
+    background-image: url(/multimedia/light.png) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px
+}
+h1{
+    font-size: 24px !important;
+    text-align: center;
+}
+h2{
+    font-size: 20px !important;
+    text-align: center;
+}
+h3{
+    font-size: 18px !important;
+}
+
+h4{
+    font-size: 12px !important;
+}
+form{
+    padding: 7px;
+}
+footer{
+    padding: 10px
+}
+#switch{
+    background-color: #F8F8F8;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px #cecece,
+                inset -4px -4px 6px #fff;
+    margin: 0px auto;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color: linear-gradient (145eg, #D8D8D8, #FFFF) ;
+    border-radius: 50px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #fff;
+
+}
+#switch.active {
+    background-color: #504d4d;
+       box-shadow: inset 4px 4px 6px #5c5353,
+                inset -4px -4px 6px rgb(110, 96, 96);   
+}
+
+#switch.active .toggle{
+    left: 40px;
+
+    box-shadow: 3px 3px 8px #434141,
+                -3px -3px 8px rgb(65, 59, 59);
+
+
+}
+body.active{
+    background-image: url(/multimedia/dark.png);
+    color: white;
+
+}
